@@ -1,0 +1,42 @@
+{
+  "name": "quasar-firebase-boilerplate",
+  "version": "0.0.1",
+  "description": "Boilerplate to start projects using Quasar and Firebase features",
+  "productName": "Quasar + Firebase boilerplate",
+  "cordovaId": "org.cordova.quasar.app",
+  "author": "Carlos Sechi <carlossechi@hotmail.com>",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.vue src",
+    "lint:fix": "eslint --ext .js,.vue src --fix",
+    "test": "echo \"No test specified\" && exit 0",
+    "build": "npx quasar build",
+    "deploy": "npx quasar build -m {your-build-mode} && npx firebase deploy --only hosting"
+  },
+  "dependencies": {
+    "firebase": "^5.9.3",
+    "vuejs-logger": "^1.5.3"
+  },
+  "devDependencies": {
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.10.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "quasar-cli": "^0.17.0",
+    "strip-ansi": "=3.0.1"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ],
+  "resolutions": {
+    "ajv": "6.8.1"
+  }
+}
