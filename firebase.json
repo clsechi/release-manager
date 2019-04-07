@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/{your-build-mode}",
+    "public": "dist/spa-mat",
     "rewrites": [ {
       "source": "**",
       "destination": "/index.html"
