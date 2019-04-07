@@ -1,10 +1,35 @@
 
 const routes = [
   {
-    path: '/',
-    component: () => import('layouts/MyLayout.vue'),
+    path: '/login',
+    component: () => import('layouts/public.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') },
+      {
+        path: '',
+        name: 'login',
+        component: () => import('pages/login/index.vue'),
+      },
+    ],
+  },
+  {
+    path: '/',
+    component: () => import('layouts/private.vue'),
+    children: [
+      {
+        path: 'releases',
+        name: 'releases-list',
+        component: () => import('pages/releases/index.vue'),
+      },
+      {
+        path: 'journalist',
+        name: 'releases-list',
+        component: () => import('pages/journalist/index.vue'),
+      },
+      {
+        path: 'pressOfficer',
+        name: 'releases-list',
+        component: () => import('pages/pressOfficer/index.vue'),
+      },
     ],
   },
 ];
@@ -13,7 +38,7 @@ const routes = [
 if (process.env.MODE !== 'ssr') {
   routes.push({
     path: '*',
-    component: () => import('pages/Error404.vue'),
+    component: () => import('pages/error404.vue'),
   });
 }
 
